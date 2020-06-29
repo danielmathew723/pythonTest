@@ -1,0 +1,81 @@
+from random import randint
+
+play = ["Rock", "Paper", "Scissors"]
+
+computer = play[randint(0, 2)]
+
+win = "You have achieved peak mega brain cells."
+lose = "Imagine losing to the computer."
+tie = "You have neither gained nor lost brain cells."
+choose = "Computer chose " + computer
+
+player_wins = 0
+computer_wins = 0
+
+game = False
+
+def cycle(choice1, choice2):
+
+
+
+while game == False:
+    player = input("Choose Rock, Paper, or Scissors: ")
+    while (player != "Rock" and player != "Scissors" and player != "Paper"):
+        print("Do you are have stupid?")
+        player = input("Choose Rock, Paper, or Scissors: ")
+    if player == "Rock":
+        if computer == "Rock":
+            print(choose)
+            print(tie)
+            print(player_wins)
+            print(computer_wins)
+        elif computer == "Paper":
+            print(choose)
+            print(lose)
+            computer_wins += 1
+            print(player_wins)
+            print(computer_wins)
+        else:
+            print(win)
+            print(choose)
+            player_wins += 1
+            print(player_wins)
+            print(computer_wins)
+    elif player == "Paper":
+        if computer == "Rock":
+            print(choose)
+            print(win)
+            player_wins += 1
+            print(player_wins)
+            print(computer_wins)
+        elif computer == "Paper":
+            print(choose)
+            print(tie)
+            print(player_wins)
+            print(computer_wins)
+        else:
+            print(choose)
+            print(lose)
+            computer_wins += 1
+            print(player_wins)
+            print(computer_wins)
+    else:
+        if computer == "Rock":
+            print(choose)
+            print(lose)
+            computer_wins += 1
+            print(player_wins)
+            print(computer_wins)
+        elif computer == "Paper":
+            print(choose)
+            print(win)
+            player_wins += 1
+            print(player_wins)
+            print(computer_wins)
+        else:
+            print(choose)
+            print(tie)
+            print(player_wins)
+            print(computer_wins)
+
+    computer = play[randint(0, 2)]
